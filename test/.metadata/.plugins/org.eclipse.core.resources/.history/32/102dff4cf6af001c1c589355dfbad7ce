@@ -1,0 +1,43 @@
+package lab06;
+//import java.util.*;
+public class Student extends Member{
+    private	int Year;
+	private int Roll_No;
+	
+	public void Pay_Fine(String name){
+		System.out.println(name+"сурагч"+"торгууль төлөх: ");
+	}
+	public int getYear() {
+		return Year;
+	}
+	public void setYear(int year) {
+		Year = year;
+	}
+	public int getRoll_No() {
+		return Roll_No;
+	}
+	public void setRoll_No(int roll_No) {
+		Roll_No = roll_No;
+	}
+	@Override
+	void Request_Book() {
+		// TODO Auto-generated method stub
+		//String name;
+		System.out.println("Request book: ");
+	}
+	@Override
+	void Return_Book() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	void Renew_Book() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	void Enquiry() {
+		// TODO Auto-generated method stub
+		
+	}
+}
