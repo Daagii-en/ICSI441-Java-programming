@@ -5,7 +5,7 @@ import java.awt.event.*;
 public class DemoradioButton extends Applet implements ItemListener {
 
 	Checkbox d1, d2, d3;
-	CheckboxGroup cg = new CheckboxGroup();//comment A
+	CheckboxGroup cg = new CheckboxGroup();//comment A CheckboxGroup class аас cg объект үүсгэж байна.
 	TextField t1 = new TextField(30);
 	public void init() {
 		setBackground(new Color(219,253,226));
@@ -18,15 +18,17 @@ public class DemoradioButton extends Applet implements ItemListener {
 		add(d3);
 		add(t1);
 		t1.setText("I Study in IT");
-		d1.addItemListener(this);//Comment B
+		d1.addItemListener(this);//Comment B үүсгэсэн Checkbox сонготуудад itemEvents хүлээн авахын тулд заасан itemListener нэмнэ.
 		d2.addItemListener(this);
 		d3.addItemListener(this);
 	}
 	@Override
-	public void itemStateChanged(ItemEvent e) {//comment C
+	public void itemStateChanged(ItemEvent e) {//comment C ItemListener interface ээс удамшин дахин тодорхойлогдсон 
+		                                       //Тухайн Item сонгогдсон эсвэл хэрэглэгчийн сонголтоос хасагдсан үед дуудагдах Method.
 		// TODO Auto-generated method stub
 		String msg = "I study in ";
-		if(d1.getState())      //comment D
+		if(d1.getState())      //comment D d1 checkbox нь "checked" эсвэл "not checked" төлөвт байгаа эсэхийг тодорхойлно.
+			                   //Boolen утга буцаана.
 			msg = msg+ d1.getLabel();
 		else 
 			msg = msg +d3.getLabel();
